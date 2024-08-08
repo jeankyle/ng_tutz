@@ -12,6 +12,7 @@ import { DashboardBaseComponent } from './dashboard-base/dashboard-base.componen
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ErrorComponent } from './error/error.component';
 import {EnrollService} from "./Services/enroll.service";
+import {FormsModule} from "@angular/forms";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -35,7 +36,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    FormsModule,
   ],
   providers: [EnrollService, provideHttpClient()],
   bootstrap: [AppComponent]

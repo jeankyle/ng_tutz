@@ -1,3 +1,15 @@
-<app-login-base></app-login-base>
-<app-dashboard-base></app-dashboard-base>
+<div class="container">
+  <div class="row">
+    <span>
+      <b>Search: </b>
+    </span>
+    <input type="text" [(ngModel)]="searchValue" name="" id="">
+  </div>
+  <br />
+  <div >
+    <div class="row">
+      <h3>Search Keyword: {{ searchValue }}</h3>
+    </div>
+  </div>
 
+</div>
