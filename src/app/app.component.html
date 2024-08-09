@@ -1,15 +1,10 @@
 <div class="container">
-  <div class="row">
-    <span>
-      <b>Search: </b>
-    </span>
-    <input type="text" [(ngModel)]="searchValue" name="" id="">
+  <button (click)="hideDiv()">Hide Div</button>
+  <br/>
+
+  <div class="row changeBackground" [ngClass]="{fadeOut: hideAttr}">
+    <h3>You can't see me!</h3>
   </div>
-  <br />
-  <div >
-    <div class="row">
-      <h3>Search Keyword: {{ searchValue }}</h3>
-    </div>
-  </div>
+  <br/>
 
 </div>

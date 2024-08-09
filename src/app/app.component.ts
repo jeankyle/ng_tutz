@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import {TranslateService} from "@ngx-translate/core";
-import {EnrollService} from "./Services/enroll.service";
 
 @Component({
   selector: 'app-root',
@@ -9,5 +7,9 @@ import {EnrollService} from "./Services/enroll.service";
 })
 
 export class AppComponent {
-  searchValue:string = 'iPhone';
+  hideAttr:boolean = false;
+
+  hideDiv() {
+    this.hideAttr = true;
+  }
 }
